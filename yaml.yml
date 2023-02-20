@@ -1,0 +1,58 @@
+# this is a comment (no tab characters allowed for indentation
+key: 'value'
+'name': 'john'
+value: 3
+stuff: true
+
+multi-line: hello |
+  how are you doing |
+    ?
+multi-line-no-newline: hello >
+  how are you doing >
+  ?
+    
+remove-trailing-space: hello |-
+  how are you?
+
+remove-trailing-folded: hello >-
+  how are you?
+    
+
+trailing-lines-kept: |+
+  hi
+trailing-kept-no-newlines: >+
+  hi
+
+# collections
+nested-map: 
+  group: value
+  person: nested-value
+
+key: string doesn't need quotes
+0.25: value
+? multi line |
+  key
+: value
+
+# arrays
+sequence:
+  - item 1
+  - item 2
+  - 0.5
+  - item 3
+
+# json style map
+json_map: {"key": "value"}
+json_seq: [1, 2, 3]
+
+# anchors (duplicate content)
+key: &anchor_name this will be duplicated
+key2: *anchor_name
+
+# explicit type
+key: !!bool true
+
+# set (maps with null values by default)
+set:
+  ? item 1
+  ? item 2
