@@ -8,3 +8,20 @@
 -- each row must be unique (primary keys), each col only has one value (might need a linking table)
 -- for composite key, if one col for that key is not releated, split up into linking table (remove dependencies on composite key) 
 -- if two columns are really similar (rating # and rating name), create new table
+
+### Other db objects than table
+* aggregates
+* functions
+* views
+* materialized views
+* operators
+* procedures
+* sequences
+* trigger functions
+* subscriptions
+
+Using indexes when you have a large dataset and frequently query it with specific col in where statement, or col is very unique
+```sql
+CREATE INDEX idx_user_email
+ON users (email);
+```
